@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.hardsoftstudio.rxflux.sample.R;
 import com.hardsoftstudio.rxflux.sample.model.GitHubRepo;
@@ -55,9 +55,9 @@ public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.ViewHolder> {
   }
 
   class ViewHolder extends RecyclerView.ViewHolder {
-    @Bind(R.id.description) public TextView descView;
-    @Bind(R.id.id) public TextView idView;
-    @Bind(R.id.name) TextView nameView;
+    @BindView(R.id.description) public TextView descView;
+    @BindView(R.id.id) public TextView idView;
+    @BindView(R.id.name) TextView nameView;
 
     public ViewHolder(View itemView) {
       super(itemView);

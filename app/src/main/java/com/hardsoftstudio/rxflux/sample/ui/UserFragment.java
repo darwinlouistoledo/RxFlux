@@ -6,7 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import butterknife.Bind;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.hardsoftstudio.rxflux.sample.R;
 import com.hardsoftstudio.rxflux.sample.SampleApp;
@@ -15,9 +16,9 @@ import com.hardsoftstudio.rxflux.sample.stores.UsersStore;
 
 public class UserFragment extends Fragment {
   private static final String ARG_USER_ID = "userId";
-  @Bind(R.id.user_name) TextView userNameView;
-  @Bind(R.id.login) TextView loginView;
-  @Bind(R.id.statistics) TextView statsView;
+  @BindView(R.id.user_name) TextView userNameView;
+  @BindView(R.id.login) TextView loginView;
+  @BindView(R.id.statistics) TextView statsView;
   private String userId;
 
   public UserFragment() {
@@ -65,6 +66,5 @@ public class UserFragment extends Fragment {
 
   @Override public void onDestroyView() {
     super.onDestroyView();
-    ButterKnife.unbind(this);
   }
 }

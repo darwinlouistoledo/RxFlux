@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import butterknife.BindView;
 import com.hardsoftstudio.rxflux.action.RxError;
 import com.hardsoftstudio.rxflux.dispatcher.RxViewDispatch;
 import com.hardsoftstudio.rxflux.sample.R;
@@ -28,16 +29,15 @@ import com.hardsoftstudio.rxflux.store.RxStoreChange;
 import java.util.Arrays;
 import java.util.List;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 import static com.hardsoftstudio.rxflux.sample.SampleApp.get;
 
 public class MainActivity extends AppCompatActivity implements RxViewDispatch, RepoAdapter.OnRepoClicked {
 
-  @Bind(R.id.recycler_view) RecyclerView recyclerView;
-  @Bind(R.id.progress_loading) ProgressBar progress_loading;
-  @Bind(R.id.root_coordinator) CoordinatorLayout coordinatorLayout;
+  @BindView(R.id.recycler_view) RecyclerView recyclerView;
+  @BindView(R.id.progress_loading) ProgressBar progress_loading;
+  @BindView(R.id.root_coordinator) CoordinatorLayout coordinatorLayout;
   private RepoAdapter adapter;
   private UsersStore usersStore;
   private RepositoriesStore repositoriesStore;
